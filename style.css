@@ -1,0 +1,104 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+    
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./flat-mountains.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container_board{
+    width: 70%;
+    height: 90%;
+    border: solid 1px;
+    display: grid;
+    grid-template-areas:
+    'titulo titulo'
+    'fichas mensajes';
+    grid-template-columns:70% 30% ;
+    grid-template-rows:15% 75% ;
+    padding: 1%;
+    background-color: rgba(243, 242, 237, 0.432);
+    border: solid 1px orangered;
+}
+.board_title{
+    grid-area: titulo;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    font-size: 60px;
+    color: aliceblue;
+    text-decoration:overline;
+
+}
+.board_fichas{
+    grid-area: fichas;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 0.1%;
+    column-gap: 0.5%;
+}
+.btn_fichas{
+    height: 20%;
+    width: 20%;
+    border: solid 1px orangered;
+    font-size: 25px;
+    -webkit-text-stroke-width: 1px;
+}
+
+.board_announces{
+    grid-area: mensajes;
+    gap: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 3%;
+
+}
+.board_announces div{
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.board_announces div:nth-child(-n+3){
+    border: solid 1px orangered;
+    border-radius: 17%;
+    color: aliceblue;
+    font-size: 22px;
+    -webkit-text-stroke-width: 1px;
+}
+.button_reset{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn_reset{
+    height: 50%;
+    width: 90%;
+    font-size: 20px;
+    -webkit-text-stroke-width: 1px;
+    color: aliceblue;
+    background-color: orangered;
+    border: solid 1px aliceblue;
+}
+.btn_reset:hover{
+    background-color: rgba(255, 68, 0, 0.473);
+}
